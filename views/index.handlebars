@@ -1,18 +1,16 @@
-<div class="container bg">
+<div class="container">
 	
 	<div class="row">
 	    <div class="col s12 center-align">
 			<img src="assets/img/burger.png" width="300px" alt="Eat Da Burger">
 	        <h1>Eat-Da-Burger</h1>
-	        <p></p>
 	    </div>
   	</div>
 	<!-- end .row -->
 
 	<div class="row">
-	    <div class="col s6">
+	    <div class="col s6" id="toeat">
 
-			<br>
 			<h4>Burgers to eat!</h4>
 
 			<ul>
@@ -23,7 +21,7 @@
 			      	  {{this.id}}.{{this.burger_name}}
                 <form action="/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="devoured" value="true">
-                  <button type="submit" class="btn waves-effect waves-light z-depth-2">DEVOUR IT!</button>
+                  <button type="submit" class="btn waves-effect waves-light green z-depth-2">DEVOUR IT!</button>
                 </form>
 			        </li> 
             </p>
@@ -32,13 +30,13 @@
 			</ul>
 	    </div>
 
-	    <div class="col s6">
+	    <div class="col s6" id="eaten">
 
 			<h4>Burgers Eaten!</h4>
 			<ul >
 	      {{#each burgers}}
 			    {{#if this.devoured}}
-					<div class="deep-orange-text" id="devoured">
+					<div class="black-text" id="devoured">
             <p>
               <li>
                 {{this.id}}.{{this.burger_name}}
@@ -55,12 +53,12 @@
 	<div class="row">
 	    <div class="col s12 center-align">
 
-			<h4>Add A Burger!</h4>
+			<h4>Add a Burger!</h4>
 
 			<form class="create-update-form" action="/" method="POST">
         <input type="text" id="ca" name="burger_name"placeholder="">
 				<input type="hidden" name="devoured" value="false">
-			  <button class="btn waves-effect waves-light" type="submit" name="action">Place your Order</button>
+			  <button class="btn waves-effect waves-light green" type="submit" name="action">Place your Order</button>
 			</form>
 	  </div>
 	</div>

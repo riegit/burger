@@ -4,3 +4,12 @@ body{
     background: rgb(240, 194, 126);
     font-weight: 800;
 }   
+#devoured{
+    opacity: 0.3
+}
+h1{
+    color: rgb(77, 14, 14);
+}
+h4{
+    color: rgb(238, 51, 18);
+}
